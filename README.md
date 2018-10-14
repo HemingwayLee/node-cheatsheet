@@ -108,6 +108,25 @@ Packages/dependencies are stored in local `node_modules` folder
 npm install express
 ```
 
+# What is package.json?
+
+It is used to define the properties of a package.
+
+## version in Package.json
+
+`^1.2.3` will match any `1.x.x` release including `1.3.0`, but will hold off on `2.0.0`.
+
+`~1.2.3` will match all `1.2.x` versions but will miss `1.3.0`.
+
+## Do I commit the package-lock.json file? Yes.
+
+It will cause a lot of noise or conflict when seeing the diff. But the benefits are:
+
+* Guarantee exact same version of every package
+* It improves the installation process
+
+We may use `^1.2.3` in your package.json, but we can't ensure each time `npm install` will pick up the same version in the dev machine and in the build server, especially those indirect dependency packages. `package-lock.json` will ensure that.
+
 # Reference
 ## Comparison
 
