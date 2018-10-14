@@ -71,6 +71,42 @@ fs.readFile('/file.md', (err, data) => {
 });
 ```
 
+# What is npm?
+
+* npm stands for Node Package Manager
+* It is like Ivy (dependency manager) in JVM language. By the way, maven is build tool + dependency manager
+
+Check installed packages
+
+```
+npm ls
+```
+
+By default, Install all modules listed as dependencies in `package.json`
+
+```
+npm install
+```
+
+Install a specific package
+```
+npm install web3
+```
+
+How to update a dependency using npm? Change `Package.json` and run `npm update`
+
+## npm global and local installation? 
+
+Packages/dependencies are stored in `<user-directory>/npm` directory
+
+```
+npm install express -g
+``` 
+
+Packages/dependencies are stored in local `node_modules` folder
+```
+npm install express
+```
 
 # Reference
 ## Comparison
