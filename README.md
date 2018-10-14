@@ -4,7 +4,7 @@
 
 # Google V8 Engine
 
-Base on V8, we can run javascript on our local machine.
+Base on V8, we can run javascript on our local machine
 
 * Build a web server (e.g., express)
 * Build utilities (e.g., gulp, grunt, ...)
@@ -41,11 +41,36 @@ But thread is heavy, that's why Node.js use `event loop`. It can service much mo
 
 # What is `event loop`
 
+Node.js is single-threaded but it support concurrency via concept of event loop and callbacks. It uses async function calls to maintain the concurrency.
+
 It does not use system threads, but instead uses the V8 engine along with the libuv library for multi-threading through asynchronous callbacks.
 
-The user script in JS is executed in one thread but all IO operations are natively handled by the engine concurrently.
+The user script in javascript is executed in one thread but all IO operations are natively handled by the engine concurrently. The engine keeps an event loop and whenever any task get completed, it fires the corresponding event which signals the event listener function to get executed.
 
 As the result, more requests are handled in parallel.
+
+# Asynchronous API (Non-blocking IO)
+
+When calling Non-blocking IO API, we need to put a callback function to it. An application can do other things while waiting for an IO operation is completed. Once IO operation is completed, the callback function will be invoked. (e.g., nodejs non-blacking IO APIs)
+
+`fs module` provides both synchronous as well as asynchronous methods.
+
+* Blocking IO (Wait for some I/O operations to be completed)
+
+```
+const fs = require('fs'); 
+const data = fs.readFileSync('/file.md'); // blocks here until file is read
+```
+
+* Non-blocking IO (a callback function need to be provided)
+
+```
+const fs = require('fs'); 
+fs.readFile('/file.md', (err, data) => { 
+  if (err) throw err; 
+});
+```
+
 
 # Reference
 ## Comparison
@@ -61,3 +86,10 @@ https://www.slideshare.net/brikis98/nodejs-vs-play-framework
 https://strongloop.com/strongblog/node-js-is-faster-than-java/
 
 https://blog.risingstack.com/node-hero-async-programming-in-node-js/
+
+http://voidcanvas.com/node-vs-browsers/
+
+https://www.tutorialspoint.com/nodejs/nodejs_interview_questions.htm
+
+https://stackoverflow.com/questions/16974557/why-is-node-js-not-suitable-for-heavy-cpu-apps
+
