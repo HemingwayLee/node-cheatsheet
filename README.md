@@ -1,6 +1,6 @@
 # What is Node.js?
 * It is a web application framework built on Google JavaScript V8 Engine
-* It is Asynchronous(non-blocking IO) and Event Driven (fast)
+* It is single threaded, asynchronous (non-blocking IO) and event driven (fast)
 
 # Google V8 Engine
 
@@ -37,7 +37,7 @@ void doSomething(int connection) {
     }
 }
 ```
-But thread is heavy, that's why Node.js use `event loop`
+But thread is heavy, that's why Node.js use `event loop`. It can service much more requests than traditional HTTP server (e.g., Apache HTTP Server)
 
 # What is `event loop`
 
