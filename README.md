@@ -1,3 +1,8 @@
+# Sample code
+* hello
+* env
+  * use default library (e.g., dotenv)
+
 # What is Node.js?
 * It is a web application framework built on Google JavaScript V8 Engine
 * It is single threaded, asynchronous (non-blocking IO) and event driven (fast)
