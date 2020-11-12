@@ -62,14 +62,14 @@ When calling Non-blocking IO API, we need to put a callback function to it. An a
 
 * Blocking IO (Wait for some I/O operations to be completed)
 
-```
+```javascript
 const fs = require('fs'); 
 const data = fs.readFileSync('/file.md'); // blocks here until file is read
 ```
 
 * Non-blocking IO (a callback function need to be provided)
 
-```
+```javascript
 const fs = require('fs'); 
 fs.readFile('/file.md', (err, data) => { 
   if (err) throw err; 
@@ -143,6 +143,9 @@ npm init
 ```
 npm install
 ```
+
+# Tips
+* [require and import](https://blog.niclin.tw/2019/10/03/nodejs-require-vs-es6-import-export/)
 
 # Reference
 ## Comparison
