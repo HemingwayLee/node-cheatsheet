@@ -27,4 +27,9 @@ whoami
 npm publish
 ```
 
+## Check token
+```
+npm token ls
+```
+
 
