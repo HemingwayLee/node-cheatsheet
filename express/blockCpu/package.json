@@ -1,0 +1,14 @@
+{
+  "name": "helloblock",
+  "version": "1.0.0",
+  "description": "block request and generate high cpu",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "ywlee",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
