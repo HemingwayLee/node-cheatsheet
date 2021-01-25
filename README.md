@@ -144,6 +144,22 @@ npm init
 npm install
 ```
 
+# Change npm registry
+## check current registry
+```
+npm config list
+```
+
+## set registry
+```
+npm set registry https://registry.npmjs.org
+```
+
+## use private registry
+```
+npm install --registry http://localhost:4873
+```
+
 # Tips
 * [require and import](https://blog.niclin.tw/2019/10/03/nodejs-require-vs-es6-import-export/)
 
