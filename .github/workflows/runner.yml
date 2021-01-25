@@ -2,7 +2,21 @@ name: Publish Node.js Package
 on:
   push: {branches: master}
 jobs:
-  build:
+  push_highcpu_to_dockerhub:
+    name: Push high cpu image to Docker Hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v1
+        with:
+          path: ./express/blockCpu/
+          username: ${{ secrets.MY_DOCKER_USERNAME }}
+          password: ${{ secrets.MY_DOCKER_PASSWORD }}
+          repository: ywlee/highcpu
+          tags: ${{ github.run_id }}
+  push_lib_to_npm_registry:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -13,6 +27,7 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
     - run: npm install
       working-directory: ./lib/lib
+      # Note: the version need to update, or it will keep failing on github action...
     - run: npm publish
       working-directory: ./lib/lib
       env:
