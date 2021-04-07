@@ -1,0 +1,11 @@
+{
+  "name": "mymochatest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "ywlee",
+  "license": "ISC"
+}
