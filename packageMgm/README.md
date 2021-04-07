@@ -73,3 +73,20 @@ npm set registry https://registry.npmjs.org
 npm install --registry http://localhost:4873
 ```
 
+# What is `yarn`
+* it is initially released by Facebook in 2016, is another popular package manager for the JavaScript programming language
+* Yarn apppeared as an attempt to solve some of the problems with npm
+  * mainly `performance` and `security`
+
+## NPM Disadvantages
+* There is a single npm registry of packages, which is unreliable in case of any performance issues
+  * Yarn allows parallel packages installation
+* Network is required to install packages
+  * Yarn can install packages from the local cache
+* Yarn has a cleaner input of CLI commands
+* Yarn has more stars and more developers to maintain it
+
+## Command Comparison
+![yarn_cmd_1](imgs/yarn1.png)
+![yarn_cmd_2](imgs/yarn2.png)
+

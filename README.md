@@ -4,7 +4,10 @@
   * use default library (e.g., dotenv)
 * arg
   * command arguments
-
+* lib
+  * publish a package to public npm
+  * download/install the package from public npm
+  
 
 # Tips
 * [require and import](https://blog.niclin.tw/2019/10/03/nodejs-require-vs-es6-import-export/)
