@@ -1,7 +1,6 @@
 # How to run
 ```
-npm init
-npm install request
+yarn
 node index.js
 ```
 
