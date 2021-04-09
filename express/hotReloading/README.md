@@ -5,7 +5,9 @@ npm install express
 nodemon index.js
 ```
 
-Open browser and access `http://localhost:3000`
+# Note
+* Open browser and access `http://localhost:3000`
+* it needs to copy local node_modules into container
 
 # How to run
 ```
@@ -17,5 +19,11 @@ npm start
 ```
 docker build -t myexp .
 docker run -it --rm -p3000:3000 myexp
+```
+
+# Run with dockercompose
+```
+docker-compose build
+docker-compose up
 ```
 

@@ -1,0 +1,14 @@
+{
+  "name": "hotreloading",
+  "version": "1.0.0",
+  "description": "``` npm init npm install express nodemon index.js ```",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "ywlee",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

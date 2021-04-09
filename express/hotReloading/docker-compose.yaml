@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ls && npm start
+    # it will copy local node_modules into container
+    volumes:
+      - "./:/home/app/"
+    ports:
+      - "3000:3000"
