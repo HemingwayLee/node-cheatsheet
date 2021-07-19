@@ -32,6 +32,13 @@ npm install express -g
 npm install express
 ```
 
+## `--save-dev` option
+* Do users need to download your testing libraries as well? Maybe you use `jest` for testing and they use `mocha`. Do you want them to install jest as well? 
+
+* When someone does, `npm i yourPackage` only the libraries required to `RUN` your library will be installed. 
+
+* Other libraries you used to bundle your code with or testing and mocking will not be installed because you put them in devDependencies
+
 # What is package.json?
 * It is used to define the properties of a package
 
