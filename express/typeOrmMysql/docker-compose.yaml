@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  mydb:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      # by default the root account is `root`
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: exp
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - mydb
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /home/app/init.sh
+    environment:
+      DB_HOST: mydb
+      DB_PORT: 3306
+      DB_NAME: exp
+      DB_USER: root
+      DB_PASS: pass
+    volumes:
+      - "./src:/home/app/src"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mydb
+
