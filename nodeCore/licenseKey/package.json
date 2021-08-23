@@ -1,0 +1,14 @@
+{
+  "name": "mylickey",
+  "version": "1.0.0",
+  "description": "``` node hello.js ```",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ywlee",
+  "license": "ISC",
+  "dependencies": {
+    "license-key-gen": "^0.1.4"
+  }
+}
