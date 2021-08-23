@@ -8,7 +8,7 @@ var userInfo = {
   zip:"postal/zip"
 }
 
-// The format must be the same...
+// The format must not be changed
 var licenseData = {
   info: userInfo, 
   prodCode: "LEN100120", 
