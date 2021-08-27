@@ -7,7 +7,16 @@
 * lib
   * publish a package to public npm
   * download/install the package from public npm
-  
+
+# Node.js vs browser javascript
+| browser javascript | Noed.js |
+| --- | --- |
+| basically used on the client-side | mostly used on the server-side | 
+| able to access HTML DOM | not able to access HTML DOM |
+| based on any engine (e.g., JS core in safari and Spidermonkey in firefox) | based on V8 engine (we control the environment) |
+| no filesystem access | filesystem access |
+| no package manager | npm package manager |
+
 
 # Tips
 * [require and import](https://blog.niclin.tw/2019/10/03/nodejs-require-vs-es6-import-export/)
