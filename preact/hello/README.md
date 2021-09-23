@@ -1,0 +1,5 @@
+# How
+```
+open index.html
+```
+
