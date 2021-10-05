@@ -24,6 +24,7 @@ whoami
 
 ## Publish
 ```
+npm run build
 npm publish
 ```
 
@@ -32,4 +33,9 @@ npm publish
 npm token ls
 ```
 
+# Note
+* source code is in `src` folder
+* `uglifyjs` is used for minifying the source code
+* `dist` folder is used for publish
+  * only the minified code will be published (it is not necessary)
 
