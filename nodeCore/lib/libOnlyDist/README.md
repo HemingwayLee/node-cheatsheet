@@ -44,5 +44,6 @@ npm token ls
 ## TODO
 * use `webpack` instead of `uglifyjs`
 * add `test` folder
+* everything on npm will be in [unpkg.com](https://unpkg.com/libywlee@1.0.12/dist/index.min.js)
 
 
