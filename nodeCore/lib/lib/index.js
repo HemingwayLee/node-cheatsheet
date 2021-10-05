@@ -3,7 +3,7 @@ function foo() {
 }
 
 exports.printMe = function() {
-  return foo();
+  console.log(foo());
 }
 
 
