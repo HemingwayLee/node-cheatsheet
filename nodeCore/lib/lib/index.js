@@ -1,5 +1,9 @@
+function foo() {
+  return "from foo";
+}
+
 exports.printMe = function() {
-  console.log("This is a message from the demo package");
+  return foo();
 }
 
 
