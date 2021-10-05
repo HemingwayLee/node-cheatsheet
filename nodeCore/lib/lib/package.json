@@ -1,12 +1,12 @@
 {
   "name": "libywlee",
-  "version": "1.0.6",
+  "version": "1.0.11",
   "description": "my first lib",
-  "main": "index.js",
+  "main": "dist/index.min.js",
   "scripts": {
-    "prepublishOnly" : "uglifyjs -o index.min.js index.js"
+    "build" : "uglifyjs src/index.js -o dist/index.min.js -c"
   },
+  "files": ["dist/*.js"],
   "author": "ywlee",
   "license": "ISC"
 }
-
