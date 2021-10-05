@@ -38,4 +38,11 @@ npm token ls
 * `uglifyjs` is used for minifying the source code
 * `dist` folder is used for publish
   * only the minified code will be published (it is not necessary)
+* `files` entry in package.json is used for publishing
+* `main` entry in package.json should be pointing to `dist` folder
+
+## TODO
+* use `webpack` instead of `uglifyjs`
+* add `test` folder
+
 
