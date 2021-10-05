@@ -1,7 +1,7 @@
 {
   "name": "libywlee",
-  "version": "1.0.11",
-  "description": "my first lib",
+  "version": "1.0.12",
+  "description": "publish only minified js into npm",
   "main": "dist/index.min.js",
   "scripts": {
     "build" : "uglifyjs src/index.js -o dist/index.min.js -c"
@@ -10,3 +10,4 @@
   "author": "ywlee",
   "license": "ISC"
 }
+
