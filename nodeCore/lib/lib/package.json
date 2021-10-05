@@ -1,12 +1,11 @@
 {
-  "name": "libywlee",
-  "version": "1.0.12",
-  "description": "publish only minified js into npm",
-  "main": "dist/index.min.js",
+  "name": "ywleefirstlib",
+  "version": "1.0.0",
+  "description": "publish my first package",
+  "main": "index.js",
   "scripts": {
-    "build" : "uglifyjs src/index.js -o dist/index.min.js -c"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "files": ["dist/*.js"],
   "author": "ywlee",
   "license": "ISC"
 }
