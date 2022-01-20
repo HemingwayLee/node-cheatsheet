@@ -33,6 +33,11 @@ npm publish
 npm token ls
 ```
 
+## Unpublish
+```
+npm -f unpublish
+```
+
 # Note
 * source code is in `src` folder
 * `uglifyjs` is used for minifying the source code
