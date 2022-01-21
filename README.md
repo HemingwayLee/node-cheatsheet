@@ -20,6 +20,8 @@
 
 # Tips
 * [require and import](https://blog.niclin.tw/2019/10/03/nodejs-require-vs-es6-import-export/)
+* [nodejs modules shared between project](https://stackoverflow.com/questions/30027739/is-it-possible-to-have-a-node-modules-directory-shared-between-projects)
+  * `ln -s node_modules`
 
 # Reference
 ## Comparison  
