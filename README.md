@@ -33,7 +33,7 @@ https://www.slideshare.net/brikis98/nodejs-vs-play-framework
 ![orm](img/orm.png)
 
 ## ebook
-file:///Users/Rosemary/Downloads/NodeJSNotesForProfessionals.pdf  
+[NodeJS Notes For Professionals](https://books.goalkicker.com/NodeJSBook/)
 
 ## Misc  
 https://strongloop.com/strongblog/node-js-is-faster-than-java/  
