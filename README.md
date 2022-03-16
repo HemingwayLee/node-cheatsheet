@@ -32,6 +32,9 @@ https://www.slideshare.net/brikis98/nodejs-vs-play-framework
 ## ORM
 ![orm](img/orm.png)
 
+## ebook
+[NodeJS Notes For Professionals](https://books.goalkicker.com/NodeJSBook/)
+
 ## Misc  
 https://strongloop.com/strongblog/node-js-is-faster-than-java/  
 https://blog.risingstack.com/node-hero-async-programming-in-node-js/  
