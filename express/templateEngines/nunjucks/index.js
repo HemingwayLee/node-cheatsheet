@@ -2,10 +2,6 @@ const express = require('express')
 const app = express()
 const nunjucks = require('nunjucks')
 
-// app.engine('html', me())
-// app.set('view engine', 'html')
-// app.set('views', __dirname + '/views')
-
 nunjucks.configure('views', {
   autoescape: true,
   express: app
