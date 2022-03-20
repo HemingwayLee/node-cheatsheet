@@ -9,12 +9,21 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
     $(document).ready(function() {
-       $("#toggle").on("click", function() {
+      $("#toggle").on("click", function() {
         $(".sidenav").toggleClass("activeside");
         $(".main").toggleClass("activemain");
         $(".main").toggleClass("col-sm-9 col-sm-11");
         $(".aaa").toggleClass("collapse");
       });
+
+      const urlDashboard = window.location.protocol + "//" + window.location.host + '/';
+      document.getElementById("dashboard").firstElementChild.setAttribute("href", urlDashboard);
+
+      const urlPhoto = window.location.protocol + "//" + window.location.host + '/photos';
+      document.getElementById("photos").firstElementChild.setAttribute("href", urlPhoto);
+
+      const urlUser = window.location.protocol + "//" + window.location.host + '/users';
+      document.getElementById("users").firstElementChild.setAttribute("href", urlUser);
     });
   </script>
   <style>
