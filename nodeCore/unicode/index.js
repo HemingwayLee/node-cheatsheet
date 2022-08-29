@@ -3,34 +3,34 @@ const punycode = require('punycode');
 var regexSymbolWithCombiningMarks = /(\P{Mark})(\p{Mark}+)/gu;
 
 function countSymbolsIgnoringCombiningMarks(string) {
-	var stripped = string.replace(regexSymbolWithCombiningMarks, function($0, symbol, combiningMarks) {
-		return symbol;
-	});
-	
+  var stripped = string.replace(regexSymbolWithCombiningMarks, function($0, symbol, combiningMarks) {
+	return symbol;
+  });
+  
   return punycode.ucs2.decode(stripped).length;
 }
 
 function countSymbolsPedantically(theStr) {
-	var normalized = theStr.normalize('NFC');
-	return punycode.ucs2.decode(normalized).length;
+  var normalized = theStr.normalize('NFC');
+  return punycode.ucs2.decode(normalized).length;
 }
 
 function countSymbols2(theStr) {
-	return punycode.ucs2.decode(theStr).length;
+  return punycode.ucs2.decode(theStr).length;
 }
 
 function countSymbols(theStr) {
-	return Array.from(theStr).length;
+  return Array.from(theStr).length;
 }
 
 
-const str = 'a禰󠄀豆子に襲わ';
+const str = '禰󠄀豆子に襲わ';
 console.log(str)
 console.log(`length: ${str.length}`);
-console.log(`count 1: ${countSymbols(str)}`)
-console.log(`count 2: ${countSymbols2(str)}`)
-console.log(`count 3: ${countSymbolsPedantically(str)}`)
-console.log(`count 4: ${countSymbolsIgnoringCombiningMarks(str)}`)
+console.log(`count array from: ${countSymbols(str)}`)
+console.log(`count ucs2 decode: ${countSymbols2(str)}`)
+console.log(`count normalized: ${countSymbolsPedantically(str)}`)
+console.log(`count remove combine: ${countSymbolsIgnoringCombiningMarks(str)}`)
 
 // codePointAt shows the whole number
 // charCodeAt shows only 0 to 65535, 
@@ -43,8 +43,13 @@ for (var i=0; i<str.length; ++i) {
   });
 }
 
+console.log("----- use for of loop -----")
 for (const symbol of str) {
-	console.log(symbol)
+  console.log({
+	  "char": symbol,
+    "point": symbol.codePointAt(0), 
+    "code":symbol.charCodeAt(0)
+	})
 }
 
 
