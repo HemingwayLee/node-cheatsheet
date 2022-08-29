@@ -9,6 +9,9 @@
   "author": "ywlee",
   "license": "ISC",
   "dependencies": {
+    "kuromoji": "^0.1.2",
+    "kuroshiro": "~1.1.2",
+    "kuroshiro-analyzer-kuromoji": "^1.1.0",
     "punycode": "^2.1.1"
   }
 }
