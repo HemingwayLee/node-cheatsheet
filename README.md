@@ -17,6 +17,20 @@
 | no filesystem access | filesystem access |
 | no package manager | npm package manager |
 
+# NVM (Node Version manager)
+* it allows you to use multiple versions of Node and without sudo
+```
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | sh
+source ~/.nvm/nvm.sh
+nvm install 0.9.0
+nvm install 0.9.9
+nvm use 0.9.0
+node --version
+#v0.9.0
+nvm use 0.9.9
+node --version
+#v0.9.9
+```
 
 # Tips
 * [require and import](https://blog.niclin.tw/2019/10/03/nodejs-require-vs-es6-import-export/)
