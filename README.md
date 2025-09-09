@@ -46,6 +46,14 @@ https://www.slideshare.net/brikis98/nodejs-vs-play-framework
 ## ORM
 ![orm](img/orm.png)
 
+## How to switch between different version of node
+```
+Usage:
+nvm install <version>       Download and install a <version>
+nvm use <version>           Modify PATH to use <version>
+nvm ls                      List versions (installed versions are blue)
+```
+
 ## ebook
 [NodeJS Notes For Professionals](https://books.goalkicker.com/NodeJSBook/)
 
